@@ -1,0 +1,444 @@
+body {
+    background: rgba(35, 52, 82, 0.65) url(pictures/background.jpg);
+    display:block;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+/*header start*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    position: relative;  
+    font-size: 25px;
+    height: 90px;
+    background-color: white;
+    width: 100%;
+    top:0;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    min-height: 60px;
+}
+
+#logo{
+    display: block;
+    width: 85px;
+    height:90px;
+}
+
+.nav {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-list {
+    display:flex;
+    column-gap: 40px;
+}
+
+.nav-link {
+    color: #000000;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #36ecec;
+    background-color: #ffffff;
+    opacity: 0.6;
+    transition: 0.3s;  
+}
+.nav-list .now {
+    color: #36ecec;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background: #36ecec;
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger-open .bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-open .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger-open .bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-open {
+    transform: translate(0) !important;
+    z-index: 2;
+}
+
+/*header end*/
+
+ /*footer start*/
+ footer {
+    font-size: large;
+    font-weight: bold;
+    background-color: #c2c2c2c2;
+    text-align: center;
+ }
+.mapouter{
+    position:relative;
+    text-align:center;
+    width:100%;
+    height:400px;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background:none!important;
+    width:100%;
+    height:400px;
+}
+.gmap_iframe {
+    height:400px!important;
+}
+ /*footer end*/
+
+@media (min-width: 1100px) {
+    .header_container, .main-container{
+        width: 1560px;
+    }
+}
+@media (min-width: 780px) and (max-width: 1100px) {
+    .nav {
+        position: absolute;
+        top: 90px;
+        background-color: white;
+        width: 100%;
+        padding: 10px 0 25px;
+        transform: translateX(-110%);
+    }   
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+    .hamburger {
+        display: block;
+    } 
+    .tab-container .tab{
+        height:55px;
+    }
+    .tab-container .tab button{
+        font-size: 1.2vw;
+        margin-right: 50px;
+    }
+    .who-we-are-logo {
+        display:block;
+        margin-left: 25%;
+    }
+    #who_we_are .who-we-are-txt {
+        display: block;
+        width: 100%;
+        font-size: 120%;
+    }
+    .program-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        overflow: hidden;
+        background-color: inherit;
+        text-align: center;
+        padding: 15px 35px;
+    }
+    .program-container #program1{
+        max-width:46%;
+        float:left;
+        margin-bottom: 15px;
+    }
+    .program-container #program2{
+        max-width:46%;
+        float:right;
+        margin-bottom: 15px;
+    }
+    .program-container #program3{
+        max-width:46%;
+        float:left;
+    }
+    .program-container #program4{
+        max-width:46%;
+        float:right;
+    }
+    .submit {
+        margin-bottom: 10px;;
+    }
+    .zoom:hover{
+        background-color: #ddd;
+        transform: scale(1.01);
+    }
+    #about_us .about-container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: inherit;
+        text-align: center;
+        padding: 15px 30px;
+    }
+    .about-container .phil {
+        display:block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .about-container .vision {
+        display:block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .about-container .target {
+        display:block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    #human_res .human-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        overflow: hidden;
+        background-color: inherit;
+        text-align: center;
+        padding: 15px 35px;
+    }
+    .human-container .support {
+        display:block;
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    .human-container .sell {
+        display:block;
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    .human-container .faults {
+        display:block;
+        width: 45%;
+    }
+    .human-container .accounting-office {
+        display:block;
+        width: 45%;
+    }
+    .tab-container .requests-table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+}
+@media (min-width: 300px) and (max-width: 780px) {
+    .nav {
+        position: absolute;
+        top: 90px;
+        background-color: white;
+        width: 95%;
+        padding: 10px 0 25px;
+        transform: translateX(-110%);
+    }    
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+    .hamburger {
+        display: block;
+    }
+    .main-container .slider {
+        width: 100%;
+        height: 300px;
+    }
+    .main-container .slider img {
+        height: 325px;
+    }
+    .tab-container .tab{
+        height:50px;
+    }
+    .tab-container .tab button{
+        font-size: 1.7vw;
+        padding: 16px 8px;
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .tab-container .tab button:hover {
+        background-color: #ddd;
+        transform: scale(1.1);
+    }
+    .who-we-are-logo {
+        display:block;
+        margin-left: 25%;
+    }
+    .who-we-are-logo img {
+        max-width: 50%;
+    }
+    #who_we_are .who-we-are-txt {
+        display: block;
+        width: 100%;
+        font-size: 100%;
+    }
+    .program-container {
+        align-items: center;
+    }
+    .program-container #program1{
+        display:block;
+        float:none;
+        max-width:100%;
+    }
+    .program-container #program2{
+        display:block;
+        float:none;
+        max-width:100%;
+    }
+    .program-container #program3{
+        display:block;
+        float:none;
+        max-width:100%;
+    }
+    .program-container #program4{
+        display:block;
+        float:none;
+        max-width:100%;
+    }
+    #newsletter {
+        max-width: 100%;
+    }
+    #newsletter input {
+        max-width: 100%;
+    }
+    #newsletter label {
+        font-size: 110%;
+    }
+    .zoom:hover{
+        background-color: #ddd;
+        transform: scale(1.01);
+    }
+    #about_us .about-container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: inherit;
+        text-align: center;
+        padding: 15px 30px;
+    }
+    .about-container .phil {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .about-container .vision {
+        display:block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .about-container .target {
+        display:block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    #human_res .human-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        overflow: hidden;
+        background-color: inherit;
+        text-align: center;
+        padding: 15px 0px;
+    }
+    .human-container .support {
+        display:block;
+        width: 45%;
+        margin-bottom: 15px;
+        margin-right: 5px;
+    }
+    .human-container .sell {
+        display:block;
+        width: 45%;
+        margin-bottom: 15px;
+        margin-right: 5px;
+    }
+    .human-container .faults {
+        display:block;
+        width: 45%;
+        margin-right: 5px;
+    }
+    .human-container .accounting-office {
+        display:block;
+        width: 45%;
+        margin-right: 5px;
+    }
+    .zoom .underline{
+        font-size: 110%;
+    }
+    #count .underline{
+        font-size: 110%;
+    }
+    .tab-container .zoom:hover{
+        background-color: #ddd;
+        transform: scale(1.01);
+    }
+    .tab h1 {
+        font-size: 100%;
+    }
+    #gasCostForm input {
+        max-width: 100%;
+    }
+    #gasCostForm label {
+        font-size: 110%;
+    }
+    #requestForm input {
+        max-width: 100%;
+    }
+    #requestForm textarea {
+        max-width: 100%;
+    }
+    #requestForm select {
+        max-width: 100%;
+    }
+    #requestForm label {
+        font-size: 110%;
+    }
+    #managerForm select {
+        max-width: 100%;
+    }
+    #managerForm label {
+        font-size: 110%;
+    }
+    .tab-container .requests-table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+}
